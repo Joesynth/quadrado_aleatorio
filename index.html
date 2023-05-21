@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="icon" href="#.png">
+	<link rel="stylesheet" href="#.css"/>
+	<script src="#/#.js"></script>
+</head>
+<body>
+
+<p>Dê F5 no navegador, e a cada vez, o quadrado aparece num lugar.</p>
+
+<canvas> </canvas>
+<button>Play</button>
+
+<script>
+
+var c = document.querySelector('canvas'); // seleciona armazenando numa variável
+c.style.backgroundColor = "lightblue";
+//c.style.borderRadius = "33%";
+//c.style.borderRadius = "50%"; // n esquecer de % ou px (medida)
+
+var ctx = c.getContext('2d'); // O "c" deve constar!
+//ctx.fillText("Olá",30, 50)
+//ctx.fillStyle = 'red'; // fill, preencher; fill style, estilo de preenchimento
+//ctx.fillRect(10, 10, 150, 100);
+//ctx.clearRect(0, 0, 55, 44)
+//ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+//ctx.stroke();
+
+function re () {
+var x = Math.random() * 300; // retorna algo entre 0 e 9 inteiros.
+var y = Math.random() * 150; // retorna algo entre 0 e 9 inteiros.
+var l = 7;
+ctx.fillRect(x, y, l, l);
+}
+document.querySelector('button').addEventListener('click', re);
+//setInterval(re, 111); // chama função automaticamente, sem ajuda do botão
+</script>
+	
+</body>
+</html>
